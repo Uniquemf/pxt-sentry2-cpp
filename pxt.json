@@ -2,12 +2,33 @@
     "name": "Sentry2",
     "description": "",
     "dependencies": {
-        "core": "*",
-        "radio": "*",
-        "microphone": "*"
+        "core": "*"
     },
     "files": [
-        "main.ts",
+        "Sentry/hardware/hw_conf.h",
+        "Sentry/hardware/hw_sentry_i2c.cpp",
+        "Sentry/hardware/hw_sentry_i2c.h",
+        "Sentry/hardware/hw_sentry_uart.cpp",
+        "Sentry/hardware/hw_sentry_uart.h",
+        "Sentry/hardware/Stream.h",
+        "Sentry/protoc/sentry_protocol_analysis.h",
+        "Sentry/protoc/protocol_analysis.h",
+        "Sentry/protoc/protocol_analysis.cpp",
+        "Sentry/protoc/protocol_types.h",
+        "Sentry/protoc/SimpleList.h",
+        "Sentry/debug/debug_tool.h",
+        "Sentry/Sentry.h",
+        "Sentry/sentry_i2c.cpp",
+        "Sentry/sentry_i2c.h",
+        "Sentry/sentry_stream_base.h",
+        "Sentry/sentry_type.h",
+        "Sentry/sentry_uart.cpp",
+        "Sentry/sentry_uart.h",
+        "Sentry/Sentry2.h",
+        "Sentry/SentryFactory.cpp",
+        "Sentry/SentryFactory.h",
+        "Sentry.cpp",
+        "Sentry.ts",
         "README.md"
     ],
     "testFiles": [
