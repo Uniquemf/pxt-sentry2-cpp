@@ -1,6 +1,6 @@
 {
     "name": "Sentry2",
-    "description": "",
+    "description": "Sensor designed for the AI education.",
     "dependencies": {
         "core": "*"
     },

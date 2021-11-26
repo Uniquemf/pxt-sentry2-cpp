@@ -27,6 +27,7 @@ namespace Sentry {
     /**
      * Initialize Sentry.
      */
+    //% blockId=begin block="initialize%id|port%port"
     void begin(SentryId id, sentry_mode_e port) {
         if (!pSentry[id]) {
             pSentry[id] = new Sentry2(0x60+id);
@@ -41,6 +42,7 @@ namespace Sentry {
     /**
      * Reset Sentry.
      */
+     //% blockId=SensorSetDefault block="%id|restore default settings"
     void setDefault(SentryId id){
         while(pSentry[id]->SensorSetDefault()!=SENTRY_OK);
     }
