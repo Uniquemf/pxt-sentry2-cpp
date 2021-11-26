@@ -54,11 +54,11 @@ struct device_t {
 
 typedef SimpleNode<device_t> device_node_t;
 typedef SimpleList<device_node_t> device_list_t;
-struct port_t {
+struct sentry_port_t {
   port_addr_t port_addr;
   device_list_t device_list;
 };
-typedef SimpleNode<port_t> port_node_t;
+typedef SimpleNode<sentry_port_t> port_node_t;
 typedef SimpleList<port_node_t> port_list_t;
 
 #endif /* PROTOCOL_TYPES_H_ */

@@ -39,7 +39,7 @@ uint8_t SentryFactory::SensorStartupCheck() {
 
 uint8_t SentryFactory::ProtocolVersionCheck() {
   uint8_t device_id = 0;
-  uint8_t firmware_version = 0;
+  //uint8_t firmware_version = 0;
   int err_count = 0;
   sentry_err_t err;
   for (;;) {

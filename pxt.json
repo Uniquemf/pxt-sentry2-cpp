@@ -29,6 +29,8 @@
         "Sentry/SentryFactory.h",
         "Sentry.cpp",
         "Sentry.ts",
+        "enums.d.ts",
+        "shims.d.ts",
         "README.md"
     ],
     "testFiles": [

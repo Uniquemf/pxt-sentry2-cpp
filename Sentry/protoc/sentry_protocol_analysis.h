@@ -2,7 +2,7 @@
 #define SENTRY_PROTOCOL_ANALYSIS_H_
 
 #include "protocol_analysis.h"
-#include "sentry_type.h"
+#include "../sentry_type.h"
 
 // Protocol
 #define SENTRY_PROTOC_START 0xFF

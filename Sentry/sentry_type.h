@@ -47,30 +47,6 @@ typedef unsigned char sentry_err_t;
 #define SENTRY_UNSUPPORT_PARAM            0x10
 #define SENTRY_UNKNOWN_PROTOCOL           0x11
 
-// typedef enum {
-//   kVisionColor            = 1,
-//   kVisionBlob             = 2,
-//   kVisionAprilTag         = 3,
-//   kVisionLine             = 4,
-//   kVisionBody             = 5,
-//   kVisionCard             = 6,
-//   kVisionFace             = 7,
-//   kVision20Classes        = 8,
-//   kVisionQrCode           = 9,
-//   kVisionObjTrack         = 10,
-//   kVisionMotionDetect     = 11,
-//   kVisionMaxType          ,
-// } sentry_vision_e;
-typedef enum {
-  kLedClose           = 0,
-  kLedRed             = 1,
-  kLedGreen           = 2,
-  kLedYellow          = 3,
-  kLedBlue            = 4,
-  kLedPurple          = 5,
-  kLedCyan            = 6,
-  kLedWhite           = 7,
-} sentry_led_color_e;
 //register address define
 typedef enum {
   kRegDeviceId        = 0x01,
@@ -128,18 +104,24 @@ typedef enum {
   kRegSn              = 0xD0,
 } sentry_reg_e;
 
-//type define
-typedef enum {
-  kLed1,
-  kLed2,
-  kLedAll,
-} sentry_led_e;
-typedef enum {
+enum sentry_led_color_e{
+  kLedClose           = 0,
+  kLedRed             = 1,
+  kLedGreen           = 2,
+  kLedYellow          = 3,
+  kLedBlue            = 4,
+  kLedPurple          = 5,
+  kLedCyan            = 6,
+  kLedWhite           = 7,
+} ;
+
+enum sentry_mode_e{
   kSerialMode,
   kI2CMode,
   kUnknownMode,
-} sentry_mode_e;
-typedef enum {
+};
+
+enum sentry_baudrate_e{
   kBaud9600     = 0x00,
   kBaud19200    = 0x01,
   kBaud38400    = 0x02,
@@ -148,8 +130,9 @@ typedef enum {
   kBaud921600   = 0x05,
   kBaud1152000  = 0x06,
   kBaud2000000  = 0x07,
-} sentry_baudrate_e;
-typedef enum {
+} ;
+
+enum sentry_obj_info_e{
   kStatus,        //!< whether the target is detected
   kXValue,        //!< target horizontal position
   kYValue,        //!< target vertical position
@@ -159,26 +142,30 @@ typedef enum {
   kRValue,        //!< R channel value
   kGValue,        //!< G channel value
   kBValue,        //!< B channel value
-} sentry_obj_info_e;
-typedef enum {
+} ;
+
+enum sentry_camera_zoom_e{
   kZoomDefault  = 0,
   kZoom1        = 1,
   kZoom2        = 2,
   kZoom3        = 3,
   kZoom4        = 4,
   kZoom5        = 5,
-} sentry_camera_zoom_e;
-typedef enum {
+} ;
+
+enum sentry_camera_fps_e{
   kFPSNormal        = 0,          //!< 25FPS mode
   kFPSHigh          = 1,          //!< 50FPS mode
-} sentry_camera_fps_e;
-typedef enum {
+} ;
+
+enum sentry_camera_white_balance_e{
   kAutoWhiteBalance       = 0,    //!< auto white balance mode
   kLockWhiteBalance       = 1,    //!< lock white balance with current value, the entire process takes about 100ms
   kWhiteLight             = 2,    //!< white light mode
   kYellowLight            = 3,    //!< yellow light mode
   kWhiteBalanceCalibrating,
-} sentry_camera_white_balance_e;
+} ;
+
 /* register type */
 typedef union {
   struct {

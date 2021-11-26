@@ -15,19 +15,15 @@
 #ifndef HW_SENTRY_I2C_H_
 #define HW_SENTRY_I2C_H_
 
-#include <Wire.h>
-
-// if u want to use software wire in arduino, change include and hw_i2c_t type here
-//#include <SoftwareWire.h>
-//@type define I2C type
-//typedef SoftwareWire hw_i2c_t;
+#include "pxt.h"
 
 
 // @Must public inheritance class SentryI2C
 class HwSentryI2C {
  public:
-  //@type define I2C type
-  typedef TwoWire hw_i2c_t;
+ //@type define I2C type
+  typedef MicroBitI2C hw_i2c_t;
+
   HwSentryI2C(hw_i2c_t* i2c_port, uint32_t address);
   virtual ~HwSentryI2C();
   HwSentryI2C(const HwSentryI2C&) = delete;

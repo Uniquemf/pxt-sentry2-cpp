@@ -15,7 +15,7 @@
 #ifndef SENTRY2_H_
 #define SENTRY2_H_
 
-#include <SentryFactory.h>
+#include "SentryFactory.h"
 
 #define SENTRY2_DEVICE_ID 0x04
 

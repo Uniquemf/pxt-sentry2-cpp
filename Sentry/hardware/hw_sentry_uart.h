@@ -1,7 +1,7 @@
 #ifndef HW_SENTRY_UART_H_
 #define HW_SENTRY_UART_H_
 
-#include <Stream.h>
+#include "Stream.h"
 
 class HwSentryUart {
  public:
